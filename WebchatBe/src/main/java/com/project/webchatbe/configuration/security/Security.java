@@ -40,13 +40,13 @@ public class Security {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**");
-//                        .allowedOrigins(
-//                                "http://localhost:3000",
-//                                "https://admin.g1230.com")
-//                        .allowedOriginPatterns("*.*.*.*:*")
-//                        .allowCredentials(true)
-//                        .allowedMethods("GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS");
+                registry.addMapping("/**")
+                        .allowedOrigins(
+                                "http://localhost:3000",
+                                "http://127.0.0.1:5500")
+                        .allowedOriginPatterns("*.*.*.*:*")
+                        .allowCredentials(true)
+                        .allowedMethods("GET", "POST", "DELETE", "PUT", "PATCH", "OPTIONS");
             }
         };
     }
